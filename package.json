@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/Suyash-Purwar/client-portfolio#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "bulma": "^0.7.5",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^6.1.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0"
   }
 }
