@@ -4,6 +4,7 @@ const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
 const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
+const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 
 // Logs Info
@@ -49,8 +50,14 @@ const copyHTML = () => {
 // Compile Sass
 const transpileSass = () => {
     return gulp.src("src/sass/*.sass")
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 5 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
 }
 
