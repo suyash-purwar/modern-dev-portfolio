@@ -35,21 +35,22 @@ const iconMin = () => {
 const minifyJS = () => {
     return gulp.src("src/js/*.js")
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
 }
 
 // Copy all HTML files
 const copyHTML = () => {
-    gulp.src("src/*.html")
+    return gulp.src("src/index.html")
         .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
 }
 
 // Compile Sass
 const transpileSass = () => {
-    return gulp.src("src/sass/style.scss")
+    return gulp.src("src/sass/*.sass")
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css/style.css'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 }
 
@@ -61,10 +62,10 @@ function watch() {
         }
     });
 
-    gulp.watch('src/sass/*.scss', transpileSass);
+    gulp.watch('src/sass/*.sass', transpileSass);
     gulp.watch('src/images/*', imageMin);
     gulp.watch('src/images/icons/*', iconMin);
-    gulp.watch('src/html/*.html', copyHTML);
+    gulp.watch('src/*.html', copyHTML);
     gulp.watch('src/js/*.js', minifyJS);
 }
 
