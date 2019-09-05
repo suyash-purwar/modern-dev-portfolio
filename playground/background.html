@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Background</title>
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<style>
+    body {
+        height: 400vh;
+    }
+    .background-header {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .background-blue-wrap {
+        filter: drop-shadow(-1px 6px 10px #1A535C);
+    }
+
+    .background-blue {
+        position: absolute;
+        height: 123vh;
+        width: 100vw;
+        background-color: #1A535C;
+        clip-path: polygon(0% 0%, 100% 0, 100% 75vh, 0 100%);
+    }
+
+    .background-blue-shadow {
+        height: 100%;
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+    }
+
+    .background-greenish {
+        position: absolute;
+        height: 106vh;
+        width: 100vw;
+        background-color: #4ECDC4;
+        z-index: -1;
+        clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 70%);
+    }
+
+    .padding-top {
+        padding-top: 10px;
+    }
+</style>
+
+<body>
+    <section class="header">
+        <div class="background-header">
+            <div class = "background-blue-wrap"><div class="background-blue"></div></div>
+            <div class="background-greenish"></div>
+        </div>
+
+        <div class="hero is-fullheight is-vcentered">
+            <div class = "padding-top hero-head">
+                <div class = "navbar">
+                    <div class = "container">
+                        <div class = "navbar-brand">
+                            <a class = "navbar-item">
+                                <img src = "../logo-design/LOGO.png" alt = "Logo">
+                            </a>
+                        </div>
+
+                        <div class = "navbar-menu">
+                            <div class = "navbar-end">
+                                <a class = "has-text-white navbar-item">
+                                    About
+                                </a>
+                                <a class = "has-text-white navbar-item">
+                                    Blogs
+                                </a>
+                                <a class = "has-text-white navbar-item">
+                                    Projects
+                                </a>
+                                <a class = "has-text-white navbar-item">
+                                    Talks
+                                </a>
+                                <a class = "has-text-white navbar-item">
+                                    Resume
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-body">
+                <div class="container">
+                    <p class="title is-size-1 is-capitalized has-text-centered has-text-white">
+                        Ashish Rawat
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
