@@ -19,7 +19,8 @@ const imageMin = () => {
             pngquant({ quality: [0.5, 0.5] }),
             mozjpeg({ quality: 50 })
         ]))
-        .pipe(gulp.dest("dist/images"));
+        .pipe(gulp.dest("dist/images"))
+        .pipe(browserSync.stream());
 }
 
 // Optimize Programming Iocns
@@ -29,7 +30,8 @@ const iconMin = () => {
             pngquant({ quality: [0.7, 0.7] }),
             mozjpeg({ quality: 70 })
         ]))
-        .pipe(gulp.dest("dist/images/icons"));
+        .pipe(gulp.dest("dist/images/icons"))
+        .pipe(browserSync.stream());
 }
 
 // Minify JavaScript
@@ -49,7 +51,7 @@ const copyHTML = () => {
 
 // Compile Sass
 const transpileSass = () => {
-    return gulp.src("src/sass/*.sass")
+    return gulp.src("src/sass/style.sass")
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
