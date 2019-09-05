@@ -1,0 +1,15 @@
+Primary Color: #1A535C
+Secondary Color: #4ECDC4
+Tertiary Color: #F9DEC9
+
+Primary Font: Raleway
+Source: Google Fonts
+Usage: For paragraps and quotations
+
+Secondary Font: Fira Code
+Source: Google Fonts
+Usage: For navigation bar, buttons and headings
+
+Logo: LOGO.png
+Location: root/logo-design/LOGO.png
+Software Used: AdobeXD
