@@ -1,14 +1,6 @@
 .font-secondary 
     font-family: $family-secondary
 
-.about-plane-wrapper
-    top: -13vh
-
-.about-plane
-    width: 60%
-    z-index: -2
-    margin: 0 10vw 0 auto
-
 .profile-pic
     width: 100% !important
     border-radius: 100%
@@ -28,3 +20,23 @@ img[alt="Github"]
 
 img[alt="Linkedin"]
     width: 22px
+
+.about 
+    position: relative !important
+    height: 120vh
+    width: 100%
+
+    .about-plane
+        positin: absolute !important
+        width: 50%
+        height: auto
+        z-index: -2
+        margin: 0 15vw 0 auto
+        top: -45vh
+        display: block
+
+    .about-content
+        top: 25vh
+        position: relative
+        width: 100%
+
