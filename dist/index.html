@@ -10,6 +10,38 @@
 </head>
 
 <body>
+    <section class="mob-nav-overlay is-hidden-desktop">
+        <div class="mob-nav-content-wrap">
+            <div class="mob-nav-cross" id="cross">
+                <img src="images/favicons/delete_sign_50px.png">
+            </div>
+            <div class="mob-nav-content">
+                <a class="mob-nav-link ">About</a>
+                <a class="mob-nav-link">Blogs</a>
+                <a class="mob-nav-link">Projects</a>
+                <a class="mob-nav-link">Talks</a>
+                <a class="mob-nav-link">Resume</a>
+                <div class="columns is-mobile is-vcentered is-centered padding-top-medium">
+                    <span class="column is-narrow">
+                        <img src = "images/favicons/twitter_26px-b.png" alt = "twitter">
+                    </span>
+                    <span class="column is-narrow">
+                        <img src = "images/favicons/medium_logo_32px-b.png" alt = "medium">
+                    </span>
+                    <span class="column is-narrow">
+                        <img src = "images/favicons/instagram_new_24px-b.png" alt = "instagram">
+                    </span>
+                    <span class="column is-narrow">
+                        <img src = "images/favicons/linkedin_26px-b.png" alt="linkedin">
+                    </span>
+                    <span class="column is-narrow">
+                        <img src = "images/favicons/github_2_30px-b.png" alt = "github">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="header">
         <div class="header-bg">
             <div class="header-bg-primary-wrap">
@@ -18,14 +50,18 @@
             <div class="header-bg-secondary"></div>
         </div>
 
-        <div class="hero is-fullheight is-vcentered">
+        <div class="hero is-fullheight-with-navbar is-vcentered">
             <div class="padding-top-small hero-head">
-                <div class="navbar">
+                <nav class="navbar" role="navigation" aria-label="main navigation">
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item">
                                 <img src="images/logo/LOGO.png" alt="Logo">
                             </a>
+
+                            <span class="navbar-burger" id="burger">
+                                <img src = "images/favicons/menu_50px.png" alt = "Menu">
+                            </span>
                         </div>
 
                         <div class="navbar-menu">
@@ -48,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
             <div class="hero-body">
                 <div class="container">
@@ -125,6 +161,19 @@
         </div>
     </section>
 
+    <script>
+        // document.querySelector("#burger").addEventListener('click', () => {
+        //     const menu = document.querySelector(".mob-nav-overlay")
+        //     menu.style.display = menu.style.display == "none" ? "block" : "none"
+        // })
+
+        document.querySelector("#burger").addEventListener("click", () => toggleNavView("block"))
+        document.querySelector("#cross").addEventListener("click", () => toggleNavView("none"))
+
+        const toggleNavView = state => {
+            document.querySelector(".mob-nav-overlay").style.display = state
+        }
+    </script>
 </body>
 
 </html>

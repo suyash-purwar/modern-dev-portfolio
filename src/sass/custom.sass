@@ -36,7 +36,71 @@ img[alt="Linkedin"]
         display: block
 
     .about-content
-        top: 25vh
+        top: 20vh
         position: relative
         width: 100%
 
+.mob-nav-overlay
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: fixed
+    z-index: 999
+    background-color: $white
+    display: none
+
+.mob-nav-content-wrap
+    position: relative
+    width: 100vw
+    height: 100vh
+
+.mob-nav-content
+    width: 90%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    a
+        display: block
+        font-size: 30px
+        margin: 20px 0
+        text-align: center
+        color: $primary
+
+    div
+        text-align: center
+
+        span img
+            width: 26px
+
+        span img[alt="instagram"]
+            width: 30px
+
+        span img[alt="linkedin"]
+            width: 23px
+
+.navbar-burger
+    img
+        top: 50%
+        left: 50%
+        width: 30px
+        height: 30px
+        position: absolute
+        transform: translate(-50%, -50%)
+
+    &:hover
+        background-color: transparent !important
+
+
+.mob-nav-cross
+    top: 10px
+    right: 10px
+    position: absolute
+
+    img 
+        width: 35px
+        height: 35px
