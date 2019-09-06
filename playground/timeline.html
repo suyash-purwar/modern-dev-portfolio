@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timeline</title>
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .timeline {
+        display: relative;
+        width: 100vw;
+        height: 100vh
+    }
+    
+    .timeline-bg-primary {
+        top: 20vh;
+        position: absolute;
+        background-color: #1A535C;
+        width: 100%;
+        height: 500px;
+        transform: skewY(7deg)
+    }
+    
+    .timeline-bg-primary>* {
+        transform: skewY(-7deg)
+    }
+    
+    .timeline-bg-secondary {
+        position: absolute;
+        z-index: -1;
+        width: 70%;
+        height: 500px;
+        clip-path: polygon(0% 25%, 100% 0, 100% 100%, 0 100%);
+        top: 12vh;
+        right: 0;
+        background-color: #4ECDC4;
+    }
+    
+    .timeline-bg-tertiary {
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        height: 200px;
+        bottom: 4vh;
+        background-color: #4ECDC4;
+        clip-path: polygon(0% 0%, 100% 0, 100% 45%, 0 100%);
+    }
+</style>
+
+<body>
+
+    <div class="timeline">
+        <div class="timeline-bg-secondary"></div>
+
+        <div class="timeline-bg-primary">
+            <div class="container">
+                <p class="title is-1 has-text-white">Testing</p>
+            </div>
+        </div>
+
+        <div class="timeline-bg-tertiary"></div>
+    </div>
+
+</body>
+
+</html>
