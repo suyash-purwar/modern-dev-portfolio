@@ -5,43 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Ashish Rawat</title>
 </head>
 
 <body>
-    <section class="mob-nav-overlay is-hidden-desktop">
-        <div class="mob-nav-content-wrap">
-            <div class="mob-nav-cross" id="cross">
-                <img src="images/favicons/delete_sign_50px.png">
-            </div>
-            <div class="mob-nav-content">
-                <a class="mob-nav-link ">About</a>
-                <a class="mob-nav-link">Blogs</a>
-                <a class="mob-nav-link">Projects</a>
-                <a class="mob-nav-link">Talks</a>
-                <a class="mob-nav-link">Resume</a>
-                <div class="columns is-mobile is-vcentered is-centered padding-top-small">
-                    <span class="column is-narrow">
-                        <img src = "images/favicons/twitter_26px-b.png" alt = "twitter">
-                    </span>
-                    <span class="column is-narrow">
-                        <img src = "images/favicons/medium_logo_32px-b.png" alt = "medium">
-                    </span>
-                    <span class="column is-narrow">
-                        <img src = "images/favicons/instagram_new_24px-b.png" alt = "instagram">
-                    </span>
-                    <span class="column is-narrow">
-                        <img src = "images/favicons/linkedin_26px-b.png" alt="linkedin">
-                    </span>
-                    <span class="column is-narrow">
-                        <img src = "images/favicons/github_2_30px-b.png" alt = "github">
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="header">
         <div class="header-bg">
             <div class="header-bg-primary-wrap">
@@ -50,124 +18,65 @@
             <div class="header-bg-secondary"></div>
         </div>
 
-        <div class="hero is-fullheight-with-navbar is-vcentered">
-            <div class="padding-top-small hero-head">
-                <!-- Navigation -->
-                <nav class="navbar" role="navigation" aria-label="main navigation">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item">
-                                <img src="images/logo/LOGO.png" alt="Logo">
-                            </a>
-
-                            <span class="navbar-burger" id="burger">
-                                <img src = "images/favicons/menu_50px.png" alt = "Menu">
-                            </span>
-                        </div>
-
-                        <div class="navbar-menu">
-                            <div class="navbar-end">
-                                <a class="is-size-6 has-text-white navbar-item">
-                                    About
-                                </a>
-                                <a class="is-size-6 has-text-white navbar-item">
-                                    Blogs
-                                </a>
-                                <a class="is-size-6 has-text-white navbar-item">
-                                    Projects
-                                </a>
-                                <a class="is-size-6 has-text-white navbar-item">
-                                    Talks
-                                </a>
-                                <a class="is-size-6 has-text-white navbar-item">
-                                    Resume
-                                </a>
-                            </div>
-                        </div>
+        <div class="header-content">
+            <div class="header-content-wrap">
+                <div class="row">
+                    <div class="col-2-of-6 v-align">
+                        <figure class="header-profile-pic">
+                            <img src="images/profile-pic.jpg" class="header-profile-pic-img" alt="Profile Image">
+                        </figure>
                     </div>
-                </nav>
-            </div>
-            <!-- Hero View -->
-            <div class="hero-body">
-                <div class="container">
-                    <div class="columns is-centered-tablet is-vcentered">
-                        <div class="column is-offset-1-desktop is-3-desktop">
-                            <figure class="image">
-                                <img src="images/profile-pic.jpg" class="profile-pic">
-                            </figure>
-                        </div>
-                        <div class="column is-offset-1-desktop is-6-desktop">
-                            <p class="title has-text-centered-mobile super-heading has-text-white has-text-weight-bold">Ashish Rawat</p>
 
-                            <p class="subtitle has-text-centered-mobile is-size-6-desktop is-size-7-mobile has-text-white">Open Source Contributor, Flutter and Android Developer, Technical Blogger, Speaker, Photograper and a life-long learner</p>
+                    <div class="col-4-of-6 v-align">
+                        <div>
+                            <p class="header-primary">Ashish Rawat</p>
 
-                            <div class="columns is-mobile header-social-links is-vcentered">
-                                <div class="column is-narrow">
-                                    <img src="images/favicons/twitter_26px.png" alt="Twitter">
-                                </div>
-                                <div class="column is-narrow">
-                                    <img src="images/favicons/medium_monogram_30px.png" alt="Medium">
-                                </div>
-                                <div class="column is-narrow">
-                                    <img src="images/favicons/instagram_new_24px.png" alt="Instagram">
-                                </div>
-                                <div class="column is-narrow">
-                                    <img src="images/favicons/linkedin_26px.png" alt="Linkedin">
-                                </div>
-                                <div class="column is-narrow">
-                                    <img src="images/favicons/github_32px.png" alt="Github">
-                                </div>
+                            <p class="header-secondary">
+                                Open Source Contributor, Flutter and Android Developer, Technical Blogger, Speaker, Photograper and a life-long learner
+                            </p>
+
+                            <div class="header-social-media">
+                                <ul class="header-links">
+                                    <li class="header-link">
+                                        <img src="images/favicons/twitter_26px.png" alt="Twitter">
+                                    </li>
+                                    <li class="header-link">
+                                        <img src="images/favicons/medium_monogram_30px.png" alt="Medium">
+                                    </li>
+                                    <li class="header-link">
+                                        <img src="images/favicons/instagram_new_24px.png" alt="Instagram">
+                                    </li>
+                                    <li class="header-link">
+                                        <img src="images/favicons/linkedin_26px.png" alt="Linkedin">
+                                    </li>
+                                    <li class="header-link">
+                                        <img src="images/favicons/github_32px.png" alt="Github">
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div class="buttons header-button">
-                                <span class="button is-small is-rounded">
-                                    <p class = "padding-left-right-big has-text-weight-bold">ABOUT</p>
-                                </span>
-
-                                <span style="width: 20px;"></span>
-
-                                <span class="button is-small is-rounded">
-                                    <p class="padding-left-right-big has-text-weight-bold">RESUME</p>
-                                </span>
+                            <div class="header-buttons">
+                                <div class="header-button">
+                                    <p>ABOUT</p>
+                                </div>
+                                <div class="header-button">
+                                    <p>RESUME</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container about-content">
-            <div class="columns">
-                <div class="column is-offset-1 is-10">
-                    <h1 class="title is-1 has-text-weight-bold">
-                        HELLO WORLD...
-                    </h1>
-
-                    <br>
-
-                    <p class="subtitle">I'm a passionate and forward thinking mobile application developer who has experience of building, integrating, testing, and supporting mobile applications for mobile devices.</p>
-                    <p class="subtitle">I’m also a lifelong learner who seeks the treasures of knowledge in order to share them with the rest of humanity.</p>
-                    <p class="subtitle">My ultimate goal, although it seems too ambitious, is to make the world a better place. Sometimes the smallest acts can make a big difference.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="about-plane">
-            <figure class="image">
-                <img src="images/bg1.png" alt="Paper plane">
-            </figure>
         </div>
     </section>
 
     <script>
-        document.querySelector("#burger").addEventListener("click", () => toggleNavView("block"))
-        document.querySelector("#cross").addEventListener("click", () => toggleNavView("none"))
+        // document.querySelector("#burger").addEventListener("click", () => toggleNavView("block"))
+        // document.querySelector("#cross").addEventListener("click", () => toggleNavView("none"))
 
-        const toggleNavView = state => {
-            document.querySelector(".mob-nav-overlay").style.display = state
-        }
+        // const toggleNavView = state => {
+        //     document.querySelector(".mob-nav-overlay").style.display = state
+        // }
     </script>
 </body>
 

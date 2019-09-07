@@ -5,3 +5,7 @@ node_modules/
 prototype/Images-edited
 prototype/screenshot
 src/images/bgs
+src/sass/background.sass
+src/sass/custom.sass
+src/sass/utilities.sass
+src/sass/variables.sass
