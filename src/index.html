@@ -10,6 +10,40 @@
 </head>
 
 <body>
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="images/logo/LOGO.png">
+        </div>
+        <div class="nav-tabs">
+            <ul class="nav-links">
+                <li class="nav-link">About</li>
+                <li class="nav-link">Blogs</li>
+                <li class="nav-link">Projects</li>
+                <li class="nav-link">Talsk</li>
+                <li class="nav-link">Resume</li>
+            </ul>
+        </div>
+
+        <div class="nav-burger" id="burger">
+            <img src="images/favicons/menu_50px.png">
+        </div>
+    </nav>
+
+    <div class="nav-menu">
+        <div class="nav-menu-cross" id="cross">
+            <img src="images/favicons/delete_sign_50px.png">
+        </div>
+        <div class="nav-menu-content">
+            <ul class="nav-menu-list">
+                <li class="nav-menu-item">About</li>
+                <li class="nav-menu-item">Blogs</li>
+                <li class="nav-menu-item">Projects</li>
+                <li class="nav-menu-item">Talks</li>
+                <li class="nav-menu-item">Resume</li>
+            </ul>
+        </div>
+    </div>
+
     <section class="header">
         <div class="header-bg">
             <div class="header-bg-primary-wrap">
@@ -71,12 +105,12 @@
     </section>
 
     <script>
-        // document.querySelector("#burger").addEventListener("click", () => toggleNavView("block"))
-        // document.querySelector("#cross").addEventListener("click", () => toggleNavView("none"))
+        document.querySelector("#burger").addEventListener("click", () => toggleNavView("block"))
+        document.querySelector("#cross").addEventListener("click", () => toggleNavView("none"))
 
-        // const toggleNavView = state => {
-        //     document.querySelector(".mob-nav-overlay").style.display = state
-        // }
+        const toggleNavView = state => {
+            document.querySelector(".nav-menu").style.display = state
+        }
     </script>
 </body>
 
