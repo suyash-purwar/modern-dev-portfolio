@@ -51,7 +51,7 @@ const copyHTML = () => {
 
 // Compile Sass
 const transpileSass = () => {
-    return gulp.src("src/sass/style.sass")
+    return gulp.src("src/sass/main.sass")
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -71,7 +71,7 @@ function watch() {
         }
     });
 
-    gulp.watch('src/sass/*.sass', transpileSass);
+    gulp.watch('src/sass/**/*.sass', transpileSass);
     gulp.watch('src/images/*', imageMin);
     gulp.watch('src/images/icons/*', iconMin);
     gulp.watch('src/*.html', copyHTML);
