@@ -21,7 +21,7 @@
                 <a class="mob-nav-link">Projects</a>
                 <a class="mob-nav-link">Talks</a>
                 <a class="mob-nav-link">Resume</a>
-                <div class="columns is-mobile is-vcentered is-centered padding-top-medium">
+                <div class="columns is-mobile is-vcentered is-centered padding-top-small">
                     <span class="column is-narrow">
                         <img src = "images/favicons/twitter_26px-b.png" alt = "twitter">
                     </span>
@@ -52,6 +52,7 @@
 
         <div class="hero is-fullheight-with-navbar is-vcentered">
             <div class="padding-top-small hero-head">
+                <!-- Navigation -->
                 <nav class="navbar" role="navigation" aria-label="main navigation">
                     <div class="container">
                         <div class="navbar-brand">
@@ -86,20 +87,21 @@
                     </div>
                 </nav>
             </div>
+            <!-- Hero View -->
             <div class="hero-body">
                 <div class="container">
-                    <div class="columns is-vcentered">
-                        <div class="column is-offset-1 is-3">
+                    <div class="columns is-centered-tablet is-vcentered">
+                        <div class="column is-offset-1-desktop is-3-desktop">
                             <figure class="image">
                                 <img src="images/profile-pic.jpg" class="profile-pic">
                             </figure>
                         </div>
-                        <div class="column is-offset-1 is-6">
-                            <p class="title super-heading has-text-white has-text-weight-bold">Ashish Rawat</p>
+                        <div class="column is-offset-1-desktop is-6-desktop">
+                            <p class="title has-text-centered-mobile super-heading has-text-white has-text-weight-bold">Ashish Rawat</p>
 
-                            <p class="subtitle has-text-white padding-top-medium">Open Source Contributor, Flutter and Android Developer, Technical Blogger, Speaker, Photograper and a life-long learner</p>
+                            <p class="subtitle has-text-centered-mobile is-size-6-desktop is-size-7-mobile has-text-white">Open Source Contributor, Flutter and Android Developer, Technical Blogger, Speaker, Photograper and a life-long learner</p>
 
-                            <div class="columns is-vcentered">
+                            <div class="columns is-mobile header-social-links is-vcentered">
                                 <div class="column is-narrow">
                                     <img src="images/favicons/twitter_26px.png" alt="Twitter">
                                 </div>
@@ -117,17 +119,15 @@
                                 </div>
                             </div>
 
-                            <div class="buttons is-3">
-                                <span class="button is-rounded">
-                                    <p class = "is-size-6 padding-left-right-big has-text-weight-medium">ABOUT</p>
+                            <div class="buttons header-button">
+                                <span class="button is-small is-rounded">
+                                    <p class = "padding-left-right-big has-text-weight-bold">ABOUT</p>
                                 </span>
 
-                                <span style="width: 40px;"></span>
+                                <span style="width: 20px;"></span>
 
-                                <span class="button is-rounded">
-                                    <p class="is-size-6 padding-left-right-big has-text-weight-medium">
-                                        RESUME
-                                    </p>
+                                <span class="button is-small is-rounded">
+                                    <p class="padding-left-right-big has-text-weight-bold">RESUME</p>
                                 </span>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
             </div>
         </div>
 
-        <div class="container about-plane">
+        <div class="about-plane">
             <figure class="image">
                 <img src="images/bg1.png" alt="Paper plane">
             </figure>
@@ -162,11 +162,6 @@
     </section>
 
     <script>
-        // document.querySelector("#burger").addEventListener('click', () => {
-        //     const menu = document.querySelector(".mob-nav-overlay")
-        //     menu.style.display = menu.style.display == "none" ? "block" : "none"
-        // })
-
         document.querySelector("#burger").addEventListener("click", () => toggleNavView("block"))
         document.querySelector("#cross").addEventListener("click", () => toggleNavView("none"))
 
