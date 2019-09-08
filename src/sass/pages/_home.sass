@@ -1,39 +1,32 @@
-.header    // Background Boxes
-    &-bg
-        position: relative
+.header
+    &-bg-primary-wrap
+        filter: drop-shadow(-1px 6px 10px $primary-color)
+
+    &-bg-primary
         width: 100vw
-        height: 100vh
+        height: 110vh
+        background-color: $primary-color
+        clip-path: polygon(0% 0%, 100% 0, 100% 85vh, 0 100%)
+        position: relative
 
-        &-primary-wrap
-            filter: drop-shadow(-1px 6px 10px $primary-color)
-
-        &-primary
+        .row
             position: absolute
-            height: 110vh
-            width: 100vw
-            background-color: $primary-color
-            clip-path: polygon(0% 0%, 100% 0, 100% 85vh, 0 100%)
+            top: 40%
+            left: 50%
+            width: 100%
+            transform: translate(-50%, -40%)
 
-        &-secondary
-            position: absolute
-            height: 106vh
-            width: 100vw
-            background-color: $secondary-color
-            z-index: -1
-            clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 70%)
+
+    &-bg-secondary
+        top: 0
+        position: absolute
+        height: 106vh
+        width: 100vw
+        background-color: $secondary-color
+        z-index: -1
+        clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 70%)
     
     // Header Content
-    &-content
-        position: absolute
-        width: 100vw
-        height: 100vh
-        top: 0
-        left: 0
-
-        &-wrap
-            width: 100%
-            @include absCenter
-
     &-v-align 
         position: relative
         height: 40rem
@@ -54,8 +47,6 @@
     &-profile-pic
         width: 100%
         position: relative
-        display: block
-        margin: 0 auto
 
         &-img
             width: 100%
@@ -63,6 +54,8 @@
             border-radius: 100%
 
         @include respond(tab-port)
+            display: block
+            margin: 0 auto
             width: 45%
 
         @include respond(phone)
@@ -71,7 +64,7 @@
             &-img
                 border-radius: 0rem
                 border: none
-                box-shadow: 12px 12px 0px -5px $white
+                box-shadow: 10px 10px 0px -5px $white
             
     &-social-media
         width: 100%
@@ -116,14 +109,9 @@
                 display: inline
 
 .about
-    height: 45rem
-    position: relative
-    width: 100%
-    // margin: 0 2rem
-
     &-plane
         position: relative
-        z-index: -5
+        z-index: -3
 
         img
             position: absolute
@@ -132,24 +120,12 @@
             left: 30vw
 
             @include respond(tab-port)
-                top: 0rem
+                top: -15rem
                 width: 40rem
-                left: 30vw
-
-            @include respond(phone)
-                display: none
-    &-content
-        position: absolute
-        top: 15vh
-        width: 100%
-        left: 0
-
-        @include respond(tab-port)
-            top: 10vh
+                left: 40vw
 
     @include respond(phone)
         height: auto
-        margin-bottom: 5vh
 
         &-plane
             display: none
