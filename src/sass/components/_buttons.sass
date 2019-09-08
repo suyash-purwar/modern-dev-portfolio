@@ -1,0 +1,18 @@
+.buttons
+    .button
+        display: inline-block
+        width: 10rem
+        padding: .8rem 2rem
+        border-radius: 4rem
+        background-color: $white
+
+        &:not(:first-child)
+            margin-left: 2rem
+        
+        p
+            text-align: center
+            font-size: 1.4rem
+            font-weight: 700
+
+    @include respond(tab-port)
+        text-align: center 
