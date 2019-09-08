@@ -1,0 +1,119 @@
+.timeline
+    position: relative
+    width: 100vw
+    height: 100vh
+    
+    &-bg-primary 
+        position: absolute
+        background-color: $primary-color
+        width: 100%
+        transform: skewY(7deg)
+
+        & > *
+            transform: skewY(-7deg)
+
+    &-bg-secondary
+        position: absolute
+        z-index: -1
+        width: 70%
+        height: 50rem
+        clip-path: polygon(0% 25%, 100% 0, 100% 100%, 0 100%)
+        top: -4rem
+        right: 0
+        background-color: $secondary-color
+
+    &-bg-tertiary
+        position: absolute
+        z-index: -1
+        width: 50%
+        height: 20rem
+        bottom: 4vh
+        background-color: $secondary-color
+        clip-path: polygon(0% 0%, 100% 0, 100% 45%, 0 100%)
+
+    &-wrapper-content
+        padding: 4rem 0 10rem 0
+
+    &-ruler
+        top: 3rem
+        padding: 2rem 0
+        position: relative
+        margin: 0 auto
+
+    &-ruler::after 
+        content: ''
+        border-radius: .5rem
+        position: absolute
+        width: 6px
+        background-color: white
+        top: 0
+        bottom: 0
+        left: 50%
+        margin-left: -3px
+
+    &-container 
+        padding: 0 20px
+        position: relative
+        background-color: inherit
+        width: 50%
+
+    &-container::after 
+        content: ''
+        position: absolute
+        width: 2rem
+        height: 2rem
+        right: -15px
+        background-color: $white
+        border: .6rem solid $secondary-color
+        top: .5rem
+        border-radius: 50%
+        z-index: 1
+
+    &-left 
+        left: 0
+
+    &-right 
+        left: 50%
+
+    &-right::after 
+        left: -16px
+
+    &-container-content
+        padding: .5rem 4rem
+        position: relative
+        border-radius: 6px
+    
+    @include respond(phone)
+        &
+            top: 8rem
+
+        &-container-content
+            padding: .5rem 1rem
+
+
+    @include respond(tab-port)
+        &-ruler::after 
+            left: 3.4rem
+
+        &-container 
+            width: 100%
+            padding-top: 1rem
+            padding-left: 5rem
+            padding-right: 25px
+
+        &-conatiner::before 
+            left: 60px
+            border: medium solid white
+            border-width: 10px 10px 10px 0
+            border-color: transparent white transparent transparent
+
+        &-container::after 
+            top: 1.4rem
+            width: 1.5rem
+            height: 1.5rem
+
+        &-left::after, &-right::after 
+            left: 15px
+        
+        &-right 
+            left: 0%

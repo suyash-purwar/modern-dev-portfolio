@@ -12,3 +12,13 @@
 
 .padding-left-right-big
     padding: 0 15px 0 15px
+
+.text-right
+    text-align: right
+
+.text-left
+    text-align: left
+
+@include respond(tab-port) 
+    .text-right
+        text-align: left
