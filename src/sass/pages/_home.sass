@@ -39,7 +39,23 @@
             width: 100%
             @include absCenter
 
+    &-v-align 
+        position: relative
+        height: 40rem
 
+        & > *
+            @include v-center
+
+        @include respond(tab-port)
+            height: auto
+            
+            & > *
+                position: static
+                transform: none
+                top: 0
+
+        @include respond(phone)
+            margin-bottom: 2rem !important
     // Header Profile
     &-profile-pic
         width: 100%
@@ -51,6 +67,16 @@
             width: 100%
             border: .5rem solid $white
             border-radius: 100%
+
+        @include respond(tab-port)
+            width: 70%
+
+        @include respond(phone)
+            &-img
+                border-radius: 0rem
+                border: none
+                box-shadow: 12px 12px 0px -5px rgba($secondary-color, 1)
+            
 
     &-social-media
         width: 100%
@@ -85,6 +111,15 @@
             
             img[alt="Instagram"]
                 width: 3.2rem
+
+        @include respond(tab-port)
+            left: 0
+            margin-left: 1.5rem
+            text-align: center
+
+            .header-links
+                display: inline
+
     &-buttons
         width: 100%
         margin-top: 1.5rem
@@ -103,6 +138,13 @@
                 text-align: center
                 font-size: 1.4rem
                 font-weight: 700
+
+        @include respond(tab-port)
+            text-align: center
+
+            .header-button
+                display: inline-block
+                
 
 .timeline
     display: relative
