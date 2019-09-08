@@ -24,11 +24,15 @@
 
             .nav-link
                 display: inline-block
-                color: $white
-                font-size: 1.5rem
 
                 &:not(:last-child)
                     margin-right: 2rem
+
+                a
+                    text-decoration: none
+                    color: $white
+                    font-size: 1.5rem
+
 
         @include respond(tab-port)
             display: none
@@ -67,11 +71,14 @@
         li
             display: inline-block
             width: 100%
-            margin: 1.5rem 0
-            font-size: 2.5rem
-            color: #000
             text-align: center
-            font-weight: 600
+            margin: 1.5rem 0
+
+            a
+                text-decoration: none
+                color: #000
+                font-size: 2.5rem
+                font-weight: 600
 
     &-cross
         position: absolute
