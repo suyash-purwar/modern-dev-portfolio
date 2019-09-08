@@ -138,13 +138,6 @@
 
             @include respond(phone)
                 display: none
-    
-    @include respond(tab-port)
-        height: 43rem
-
-    @include respond(phone)
-        height: 40rem
-
     &-content
         position: absolute
         top: 15vh
@@ -154,4 +147,13 @@
         @include respond(tab-port)
             top: 10vh
 
-    
+    @include respond(phone)
+        height: auto
+        margin-bottom: 5vh
+
+        &-plane
+            display: none
+
+        &-content
+            position: relative
+            
