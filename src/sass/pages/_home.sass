@@ -54,8 +54,6 @@
                 transform: none
                 top: 0
 
-        @include respond(phone)
-            margin-bottom: 2rem !important
     // Header Profile
     &-profile-pic
         width: 100%
@@ -69,15 +67,14 @@
             border-radius: 100%
 
         @include respond(tab-port)
-            width: 70%
+            width: 65%
 
         @include respond(phone)
             &-img
                 border-radius: 0rem
                 border: none
-                box-shadow: 12px 12px 0px -5px rgba($secondary-color, 1)
+                box-shadow: 12px 12px 0px -5px $white
             
-
     &-social-media
         width: 100%
         margin-top: 2rem
