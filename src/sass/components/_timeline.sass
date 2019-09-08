@@ -2,6 +2,7 @@
     position: relative
     width: 100vw
     height: 130vh
+    top: 8.5rem
     
     &-bg-primary 
         position: absolute
@@ -82,29 +83,24 @@
         padding: .5rem 4rem
         position: relative
         border-radius: 6px
-    
-    @include respond(phone)
-        &
-            top: 8rem
-
-        &-container-content
-            padding: .5rem 1rem
-
 
     @include respond(tab-port)
+        &
+            top: 6.5rem
+
         &-ruler::after 
-            left: 3.4rem
+            left: 24px
 
         &-container 
             width: 100%
             padding-top: 1rem
             padding-left: 5rem
-            padding-right: 25px
+            padding-right: 2.5rem
 
         &-conatiner::before 
-            left: 60px
+            left: 6rem
             border: medium solid white
-            border-width: 10px 10px 10px 0
+            border-width: 1rem 1rem 1rem 0
             border-color: transparent white transparent transparent
 
         &-container::after 
@@ -113,7 +109,14 @@
             height: 1.5rem
 
         &-left::after, &-right::after 
-            left: 15px
+            left: 1.5rem
         
         &-right 
             left: 0%
+
+    @include respond(phone)
+        &
+            top: 4rem
+
+        &-container-content
+            padding: .5rem 1rem
