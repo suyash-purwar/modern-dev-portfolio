@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <title>Ashish Rawat</title>
 </head>
 
@@ -179,7 +180,7 @@
     </div>
 
 
-    <div class="skills">
+    <section class="skills">
         <div class="row">
             <h1 class="skills-heading">SKILLS</h1>
 
@@ -218,7 +219,42 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="blogs">
+        <div class="blogs-primary">
+            <h3 class="blogs-primary-heading text-center">TECHNICAL BLOGS</h3>
+
+            <div class="row">
+                <div class="col-3-of-5">
+                    <div class="big-blog">
+                        <img src="images/blog1.gif">
+                        <a class="blog-big-link">Countdown Timer using Animation in Flutter</a>
+                    </div>
+
+                    <div class="big-blog">
+                        <img src="images/blog2.png">
+                        <a class="blog-big-link">Bottom Navigation Bar using Provider in Flutter</a>
+                    </div>
+                </div>
+                <div class="col-2-of-5">
+                    <ul class="blogs-list">
+                        <li class="blog-item"><a href="#" class="blog-small-link"><span>01</span>Managing the state of a Widget using BLOC | Flutter</a></li>
+                        <li class="blog-item"><a href="#" class="blog-small-link"><span>02</span>Usinggg Shared Preferences in Flutter</a></li>
+                        <li class="blog-item"><a href="#" class="blog-small-link"><span>03</span>Wireless Debugging through ADB in Android using WiFi</a></li>
+                        <li class="blog-item"><a href="#" class="blog-small-link"><span>04</span>Using ViewModel with RoomDatabase | Android</a></li>
+                        <li class="blog-item"><a href="#" class="blog-small-link"><span>05</span>Managing the state of a Widget using bloc | Flutter</a></li>
+                    </ul>
+
+                    <div class="buttons" style="position: relative; left: -2.5rem">
+                        <div class="button">
+                            <p>READ MORE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         document.querySelector("#burger").addEventListener("click", () => toggleNavView("block"))
@@ -228,6 +264,9 @@
             document.querySelector(".nav-menu").style.display = state
         }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>

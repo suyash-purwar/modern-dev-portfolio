@@ -126,7 +126,7 @@
 
     &-content
         padding: 4rem 0
-        
+
         @include respond(phone)
             padding: 2rem .5rem
 
@@ -139,48 +139,13 @@
         &-content
             position: relative
 
-.skills
-    margin: 10rem 0
-    width: 100%
+.blogs
+    position: relative
 
-    .skill-icons-wrapper
-        margin-top: 4rem
-        width: 100%
+    &-primary
+        background-color: $primary-color
+        transform: skewY(7deg)
+        padding: 8rem 0
 
-        .skill-icons
-            width: 100%
-            position: relative
-            list-style-type: none
-
-            .skill-icon
-                display: inline-block
-                list-style-type: none
-                width: 19%
-                position: relative
-                margin-bottom: 1.5rem
-
-                img
-                    width: 60%
-                    position: relative
-                    display: block
-                    margin: 0 auto
-
-                    @include respond(tab-port)
-                        width: 60%
-
-                    @include respond(phone)
-                        width: 70%
-
-
-                @include respond(tab-port)
-                    width: 24%
-                    margin-bottom: 1.5rem
-
-                @include respond(phone)
-                    width: 32%
-                    margin-bottom: .5rem
-
-            &:not(:last-child)
-                margin-bottom: 2rem
-
-    
+        & > *
+            transform: skewY(-7deg)
