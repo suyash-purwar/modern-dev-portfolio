@@ -124,6 +124,12 @@
                 width: 40rem
                 left: 40vw
 
+    &-content
+        padding: 4rem 1rem
+
+        @include respond(phone)
+            padding: 2rem .5rem
+
     @include respond(phone)
         height: auto
 
@@ -132,4 +138,43 @@
 
         &-content
             position: relative
-            
+
+.skills
+    margin: 10rem 0
+    width: 100%
+
+    .skill-icons-wrapper
+        margin-top: 4rem
+        width: 100%
+
+        .skill-icons
+            width: 100%
+            position: relative
+            list-style-type: none
+
+            .skill-icon
+                display: inline-block
+                list-style-type: none
+                width: 19%
+                position: relative
+
+                img
+                    width: 60%
+                    position: relative
+                    display: block
+                    margin: 0 auto
+
+                    @include respond(tab-port)
+                        width: 60%
+
+
+                @include respond(tab-port)
+                    width: 24%
+
+                @include respond(phone)
+                    width: 49%
+
+            &:not(:last-child)
+                margin-bottom: 2rem
+
+    
