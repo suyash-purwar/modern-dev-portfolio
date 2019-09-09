@@ -73,7 +73,7 @@ body
         line-height: 0
         margin: 0 1rem
 
-.skills-heading
+.skills-heading, .talks-heading
     font-size: 4rem
     color: $black
     font-weight: 800
@@ -114,8 +114,14 @@ body
 
         @include clearfix
 
+.talks-subtitle
+    font-size: 1.6rem
+    color: $black
+    margin: 2rem 0
+
 @include respond(tab-port)
     .timeline-heading,
     .skills-heading,
-    .blogs-heading
+    .blogs-heading,
+    .talks-heading
         font-size: 3.3rem
