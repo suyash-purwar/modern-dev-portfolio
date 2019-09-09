@@ -139,6 +139,38 @@
         &-content
             position: relative
 
+.timeline
+    position: relative
+    width: 100vw
+    top: 8.5rem
+    
+    &-bg-primary
+        background-color: $primary-color
+        width: 100%
+        transform: skewY(7deg)
+
+        & > *
+            transform: skewY(-7deg)
+
+    &-bg-secondary
+        position: absolute
+        z-index: -1
+        width: 70%
+        height: 50rem
+        clip-path: polygon(0% 25%, 100% 0, 100% 100%, 0 100%)
+        top: -4rem
+        right: 0
+        background-color: $secondary-color
+
+    &-bg-tertiary
+        position: absolute
+        z-index: -1
+        width: 50%
+        height: 20rem
+        bottom: 4vh
+        background-color: $secondary-color
+        clip-path: polygon(0% 0%, 100% 0, 100% 45%, 0 100%)
+
 .blogs
     position: relative
 
@@ -146,6 +178,9 @@
         background-color: $primary-color
         transform: skewY(7deg)
         padding: 8rem 0
+
+        @include respond(tab-port)
+            padding: 6rem 0
 
         & > *
             transform: skewY(-7deg)

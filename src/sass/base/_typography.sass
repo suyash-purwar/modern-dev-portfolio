@@ -17,7 +17,8 @@ body
 
     @include respond(phone)
         font-size: 4.5rem
-        font-weight: 500
+        font-weight: 600
+        letter-spacing: 2px
 
 .header-secondary
     font-size: 1.8rem
@@ -78,12 +79,12 @@ body
     font-weight: 800
     letter-spacing: .3rem
 
-.blogs-primary-heading
+.blogs-heading
     font-size: 4rem
     color: $white
     font-weight: 800
     letter-spacing: .3rem
-    margin-bottom: 2rem
+    margin-bottom: 3rem
 
 .blog-big-link
     font-size: 1.5rem
@@ -112,3 +113,9 @@ body
         right: 3rem
 
         @include clearfix
+
+@include respond(tab-port)
+    .timeline-heading,
+    .skills-heading,
+    .blogs-heading
+        font-size: 3.3rem
