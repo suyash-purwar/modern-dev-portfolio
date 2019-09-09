@@ -1,0 +1,30 @@
+.footer
+	position: relative
+	top: 13rem
+	width: 100vw
+	padding: 10rem 0 5rem 0
+	background-color: $primary-color
+	clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+
+	& > .header-social-media
+		margin: 0 auto
+		text-align: center
+		display: inline-block
+		left: 0
+
+		& .header-link
+			margin: 0 1.5rem !important
+
+			@include respond(phone)
+				margin: 0 1rem !important
+
+	& > .buttons
+		text-align: center
+
+	&-small
+		position: relative
+		top: 4.3rem
+		text-align: center
+		color: $white
+		font-size: 1.3rem
+		font-weight: 500
