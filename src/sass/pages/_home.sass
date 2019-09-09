@@ -125,8 +125,8 @@
                 left: 40vw
 
     &-content
-        padding: 4rem 1rem
-
+        padding: 4rem 0
+        
         @include respond(phone)
             padding: 2rem .5rem
 
@@ -157,6 +157,7 @@
                 list-style-type: none
                 width: 19%
                 position: relative
+                margin-bottom: 1.5rem
 
                 img
                     width: 60%
@@ -167,12 +168,17 @@
                     @include respond(tab-port)
                         width: 60%
 
+                    @include respond(phone)
+                        width: 70%
+
 
                 @include respond(tab-port)
                     width: 24%
+                    margin-bottom: 1.5rem
 
                 @include respond(phone)
-                    width: 49%
+                    width: 32%
+                    margin-bottom: .5rem
 
             &:not(:last-child)
                 margin-bottom: 2rem
