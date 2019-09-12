@@ -6,6 +6,10 @@ const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
+const concat = require("gulp-concat")
+const merge = require("merge-stream")
+const rename = require("gulp-rename")
+const minifycss = require("gulp-clean-css")
 
 // Logs Info
 const info = () => {
@@ -50,8 +54,14 @@ const copyHTML = () => {
 }
 
 // Compile Sass
-const transpileSass = () => {
-    return gulp.src("src/sass/main.sass")
+const manageStyles = () => {
+    const css_paths = [
+        'node_modules/slick-carousel/slick/slick-theme.css',
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/aos/dist/aos.css'
+    ]
+
+    const sass_stream = gulp.src("src/sass/main.sass")
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -59,8 +69,13 @@ const transpileSass = () => {
             browsers: ['last 5 versions'],
             cascade: false
         }))
+
+    const css_stream = gulp.src(css_paths)
+        .pipe(minifycss())
+
+    return merge(sass_stream, css_stream)
+        .pipe(concat("style.min.css"))
         .pipe(gulp.dest("dist/css"))
-        .pipe(browserSync.stream());
 }
 
 
@@ -71,7 +86,7 @@ function watch() {
         }
     });
 
-    gulp.watch('src/sass/**/*.sass', transpileSass);
+    gulp.watch('src/sass/**/*.sass', manageStyles);
     gulp.watch('src/images/*', imageMin);
     gulp.watch('src/images/icons/*', iconMin);
     gulp.watch('src/*.html', copyHTML);
