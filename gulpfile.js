@@ -47,13 +47,7 @@ const copyHTML = () => {
 
 // Compile Sass
 const manageStyles = () => {
-    const css_paths = [
-        'node_modules/slick-carousel/slick/slick-theme.css',
-        'node_modules/slick-carousel/slick/slick.css',
-        'node_modules/aos/dist/aos.css'
-    ]
-
-    const sass_stream = gulp.src("src/sass/main.sass")
+    return gulp.src("src/sass/main.sass")
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -61,28 +55,23 @@ const manageStyles = () => {
             browsers: ['last 5 versions'],
             cascade: false
         }))
-
-    const css_stream = gulp.src(css_paths)
-        .pipe(minifycss())
-
-    return merge(sass_stream, css_stream)
-        .pipe(concat("style.min.css"))
         .pipe(gulp.dest("dist/css"))
+        .pipe(browserSync.stream());
 }
 
 // Bundle Third Party JavaScript
 const bundleThirdPartyJS = () => {
     js_paths = [
-        "node_modules/slick-carousel/slick/slick.min.js",
-        "node_modules/aos/dist/aos.js",
+        "node_modules/siema/dist/siema.min.js",
+        "node_modules/scroll-out/dist/scroll-out.min.js",
         "node_modules/smooth-scroll/dist/smooth-scroll.min.js"
     ]
 
     const slick = gulp.src(js_paths[0])
-    const aos = gulp.src(js_paths[1])
-    const scroll = gulp.src(js_paths[2])
+    const scroll_out = gulp.src(js_paths[1])
+    const smooth_scroll = gulp.src(js_paths[2])
 
-    return merge(aos, slick, scroll)
+    return merge(scroll_out, slick, smooth_scroll)
         .pipe(concat("bundle.min.js"))
         .pipe(gulp.dest("dist/js"))
 }
