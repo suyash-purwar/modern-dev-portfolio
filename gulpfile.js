@@ -38,14 +38,6 @@ const iconMin = () => {
         .pipe(browserSync.stream());
 }
 
-// Minify JavaScript
-const minifyJS = () => {
-    return gulp.src("src/js/*.js")
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
-        .pipe(browserSync.stream());
-}
-
 // Copy all HTML files
 const copyHTML = () => {
     return gulp.src("src/index.html")
@@ -78,6 +70,29 @@ const manageStyles = () => {
         .pipe(gulp.dest("dist/css"))
 }
 
+// Bundle Third Party JavaScript
+const bundleThirdPartyJS = () => {
+    js_paths = [
+        "node_modules/slick-carousel/slick/slick.min.js",
+        "node_modules/aos/dist/aos.js",
+        "node_modules/smooth-scroll/dist/smooth-scroll.min.js"
+    ]
+
+    const slick = gulp.src(js_paths[0])
+    const aos = gulp.src(js_paths[1])
+    const scroll = gulp.src(js_paths[2])
+
+    return merge(aos, slick, scroll)
+        .pipe(concat("bundle.min.js"))
+        .pipe(gulp.dest("dist/js"))
+}
+
+// Bundle Index JS
+const bundleIndexJS = () => {
+    return gulp.src("src/js/index.js")
+        .pipe(uglify())
+        .pipe(gulp.dest("dist/js"))
+}
 
 function watch() {
     browserSync.init({
@@ -90,7 +105,8 @@ function watch() {
     gulp.watch('src/images/*', imageMin);
     gulp.watch('src/images/icons/*', iconMin);
     gulp.watch('src/*.html', copyHTML);
-    gulp.watch('src/js/*.js', minifyJS);
+    gulp.watch('src/js/*.js', bundleThirdPartyJS);
+    gulp.watch('src/js/*.js', bundleIndexJS);
 }
 
 exports.watch = watch
