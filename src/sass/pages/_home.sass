@@ -3,7 +3,6 @@
         filter: drop-shadow(-1px 6px 10px $primary-color)
 
     &-bg-primary
-        width: 100vw
         height: 110vh
         background-color: $primary-color
         clip-path: polygon(0% 0%, 100% 0, 100% 85vh, 0 100%)
@@ -22,9 +21,10 @@
 
     &-bg-secondary
         top: 0
+        left: 0
         position: absolute
         height: 106vh
-        width: 100vw
+        width: 100%
         background-color: $secondary-color
         z-index: -1
         clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 70%)
@@ -148,7 +148,6 @@
 
 .timeline
     position: relative
-    width: 100vw
     top: 8.5rem
     
     &-bg-primary
