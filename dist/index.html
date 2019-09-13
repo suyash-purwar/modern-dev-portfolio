@@ -18,16 +18,16 @@
         <div class="nav-tabs">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <a data-scroll href="#about">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li class="nav-link">
-                    <a data-scroll href="#blogs">Blogs</a>
+                    <a href="#blogs">Blogs</a>
                 </li>
                 <li class="nav-link">
                     <a href="https://github.com/ashishrawat2911?tab=repositories">Projects</a>
                 </li>
                 <li class="nav-link">
-                    <a data-scroll href="#talks">Talks</a>
+                    <a href="#talks">Talks</a>
                 </li>
                 <li class="nav-link">
                     <a href="https://drive.google.com/file/d/1VVKB_JNOvZQw9kSKm5YvBZXuPO0Iyyq_/view">Resume</a>
@@ -49,16 +49,16 @@
         <div class="nav-menu-content">
             <ul class="nav-menu-list">
                 <li class="nav-menu-item">
-                    <a onclick="toggleNavView('none')" data-scroll href="#about">About</a>
+                    <a onclick="toggleNavView('none')" href="#about">About</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a onclick="toggleNavView('none')" data-scroll href="#blogs">Blogs</a>
+                    <a onclick="toggleNavView('none')" href="#blogs">Blogs</a>
                 </li>
                 <li class="nav-menu-item">
                     <a onclick="toggleNavView('none')" href="https://github.com/ashishrawat2911?tab=repositories">Projects</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a onclick="toggleNavView('none')" data-scroll href="#talks">Talks</a>
+                    <a onclick="toggleNavView('none')" href="#talks">Talks</a>
                 </li>
                 <li class="nav-menu-item">
                     <a onclick="toggleNavView('none')" href="https://drive.google.com/file/d/1VVKB_JNOvZQw9kSKm5YvBZXuPO0Iyyq_/view">Resume</a>
@@ -365,9 +365,11 @@
             loop: true
         })
 
-        var scroll = new SmoothScroll('a[data-scroll]', {
+        var scroll = new SmoothScroll('a[href*="#"]', {
             speed: 600
         });
+
+        // ScrollOut()
     </script>
 </body>
 
