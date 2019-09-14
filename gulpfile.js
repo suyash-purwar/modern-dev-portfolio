@@ -27,6 +27,11 @@ const imageMin = () => {
         .pipe(browserSync.stream());
 }
 
+// Send favicons to dist
+const sendFavicons = () => gulp.src("src/images/favicons/*")
+    .pipe(gulp.dest("dist/images/favicons"))
+    .pipe(browserSync.stream());
+
 // Optimize Programming Iocns
 const iconMin = () => {
     return gulp.src("src/images/icons/*")
@@ -93,6 +98,7 @@ function watch() {
     gulp.watch('src/sass/**/*.sass', manageStyles);
     gulp.watch('src/images/*', imageMin);
     gulp.watch('src/images/icons/*', iconMin);
+    gulp.watch('src/images/favicons/*', sendFavicons);
     gulp.watch('src/*.html', copyHTML);
     gulp.watch('src/js/*.js', bundleThirdPartyJS);
     gulp.watch('src/js/*.js', bundleIndexJS);

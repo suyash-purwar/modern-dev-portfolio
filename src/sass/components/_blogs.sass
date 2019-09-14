@@ -45,7 +45,7 @@
 
 		.blog-panel
 			position: relative
-			width: 95%
+			width: 90%
 			border: 1px solid $white
 			border-radius: 5px
 			background-color: $white
@@ -67,18 +67,35 @@
 				color: $black
 				font-size: 2.1rem
 				margin: 1.5rem 1rem
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
+				text-overflow: ellipsis
+				white-space: nowrap
+				overflow: hidden
 
 				@include respond(phone)
 					font-size: 1.5rem
 					margin: 1rem .5rem
 
+		&-action-btn
+			margin: 0 auto
+			text-align: center
+
+			&-left,
+			&-right
+				display: inline-block
+				padding: 1rem
+
+				img
+					width: 4.5rem
+					height: 4.5rem
+
+				@include respond(phone)					
+					img
+						width: 3.5rem
+						height: 3.5rem
+
 	.blog-button
-		position: relative;
+		position: relative
 		left: -2.5rem
-		top: 1rem
 
 		@include respond(tab-port)
 			left: 0

@@ -286,6 +286,15 @@
                     </div>
                 </div>
 
+                <div class="blogs-carousel-action-btn">
+                    <div class="blogs-carousel-action-btn-left">
+                        <img src="images/favicons/left_50px.png">
+                    </div>
+                    <div class="blogs-carousel-action-btn-right">
+                        <img src="images/favicons/right_50px.png">
+                    </div>
+                </div>
+
                 <div class="buttons blog-button">
                     <div class="button">
                         <p>READ MORE</p>
@@ -358,9 +367,12 @@
             document.querySelector(".nav-menu").style.display = state
         }
 
-        new Siema({
+        const blogs_carousel = new Siema({
             loop: true
         })
+
+        document.querySelector('.blogs-carousel-action-btn-left').addEventListener('click', () => blogs_carousel.prev());
+        document.querySelector('.blogs-carousel-action-btn-right').addEventListener('click', () => blogs_carousel.next());
 
         var scroll = new SmoothScroll('a[href*="#"]', {
             speed: 600
