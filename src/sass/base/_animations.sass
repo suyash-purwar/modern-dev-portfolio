@@ -1,5 +1,8 @@
+.header-primary
+    opacity: 0
 
-.header-primary[animate].words
+.header-primary.words
+    opacity: 1 
     .word
         animation: slide-down .7s cubic-bezier(.82, .1, .14, 1.12) forwards
         animation-delay: calc(.5s + (.1s * var(--word-index)))
@@ -13,9 +16,9 @@
                 transform: translateY(0)
                 opacity: 1
 
-.header-secondary[animate],
-.header-social-media[animate],
-.buttons[animate]
+.header-secondary,
+.header-social-media,
+.buttons
     animation: fade-in-bottom .5s ease-in forwards 1s
     opacity: 0
 
@@ -25,7 +28,7 @@
         to
             opacity: 1
 
-.header-profile-pic-img[animate]
+.header-profile-pic-img
     animation: scale-down-up .3s linear .7s forwards
     opacity: 0
 
