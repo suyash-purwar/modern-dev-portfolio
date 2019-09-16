@@ -100,20 +100,17 @@ body
     color: $white
     font-weight: 400
     text-decoration: none
+    padding: 0 0 0 15px
     display: inline-block
 
     span
-        color: $secondary-color
-        font-family: "Fira Code"
+        font-size: 3.5rem
         font-weight: 600
-        font-size: 3.7rem
-        display: block
-        float: left
-        position: relative
-        bottom: 0rem
-        right: 3rem
-
-        @include clearfix
+        color: $secondary-color
+        position: absolute
+        top: 50%;
+        transform: translateY(-55%)
+        left: -10%
 
 .talks-subtitle
     font-size: 1.6rem
