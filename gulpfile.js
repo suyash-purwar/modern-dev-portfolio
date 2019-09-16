@@ -53,8 +53,7 @@ const copyHTML = () => {
 // Manage Styles
 const manageStyles = () => {
     const css_paths = [
-        "node_modules/splitting/dist/splitting.css",
-        "node_modules/splitting/dist/splitting-cells.css"
+        "node_modules/splitting/dist/splitting.css"
     ]
 
     const sass_stream = gulp.src("src/sass/main.sass")
@@ -79,17 +78,15 @@ const manageStyles = () => {
 const bundleThirdPartyJS = () => {
     js_paths = [
         "node_modules/siema/dist/siema.min.js",
-        "node_modules/scroll-out/dist/scroll-out.min.js",
         "node_modules/smooth-scroll/dist/smooth-scroll.min.js",
         "node_modules/splitting/dist/splitting.min.js"
     ]
 
     const slick = gulp.src(js_paths[0])
-    const scroll_out = gulp.src(js_paths[1])
-    const smooth_scroll = gulp.src(js_paths[2])
-    const splitting = gulp.src(js_paths[3])
+    const smooth_scroll = gulp.src(js_paths[1])
+    const splitting = gulp.src(js_paths[2])
 
-    return merge(scroll_out, slick, smooth_scroll, splitting)
+    return merge(slick, smooth_scroll, splitting)
         .pipe(concat("bundle.min.js"))
         .pipe(gulp.dest("dist/js"))
 }
